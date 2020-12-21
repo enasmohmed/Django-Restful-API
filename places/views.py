@@ -13,11 +13,22 @@ from places.serializer import PlaceSerializer, RateSerializer
 
 
 
-
+# مخطط بيانات للمكان التاريخي 
 class PlacesViewSet(ModelViewSet):
     permission_classes = (permissions.DjangoModelPermissionsOrAnonReadOnly,)
     queryset = Place.objects.all()
     serializer_class = PlaceSerializer
+
+
+
+# مخطط بيانات تقييمات المكان التاريخي 
+class RatesViewSet(ModelViewSet):
+    permission_classes = (permissions.DjangoModelPermissions,)
+    queryset = Rate.objects.all()
+    serializer_class = RateSerializer
+
+
+
 
 
 
