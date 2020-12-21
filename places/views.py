@@ -28,14 +28,3 @@ class RatesViewSet(ModelViewSet):
     serializer_class = RateSerializer
 
 
-
-
-
-
-
-class RatesViewSet(ModelViewSet):
-    permission_classes = (permissions.DjangoModelPermissions,)
-    queryset = Rate.objects.all()
-    serializer_class = RateSerializer
-
-
